@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/mainStyle.css">
+  <title>Home</title>
+</head>
+<body>
+  <!-- Behin head -->
+  <div id="leftDiv" class="hidden"><img src="./imgs/door.png" width="100%" height="100%"></img></div>
+  <div id="centerDiv" class="hidden"><img src="./imgs/button.png" width="100%" height="100%"></img></div>
+  <div id="rightDiv" class="hidden"><img src="./imgs/door.png" width="100%" height="100%"></img></div>
+  <div class="container-fluid">
+    <header>
+      <div class="row">
+        <div class="col-md-12">
+          <!-- Jumbotron -->
+          <div class="jumbotron">
+            <h1 class="display-4 text-center">Welcome!</h1>
+            <p class="lead text-center">This is a simple website that contains several games to play.</p>
+          </div>
+        </div>
+        <!-- End Jumbotron -->
+      </div>
+      <!-- End row and column-->
+      <div class="row">
+        <div class="col-md-12">
+          <!-- Navbar -->
+          <nav class="navbar navbar-expand-lg navbar-light bg-navbar ">
+            <a class="navbar-brand" href="#">2018<small class="text-muted">©</small></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="./index.html">Home</a>
+                <a class="nav-item nav-link" href="./games.html">Games <span class="badge badge-pill badge-info">
+                    6</span></a>
+                <a class="nav-item nav-link" href="./aboutme.html">About me</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- End head -->
+    <!-- End Navbar row and column -->
+    <div class="row">
+      <div class="col ml-3 mt-2">
+        <img src="./imgs/bird.gif" width="200px" height="150px"></img>
+        <span class="bird-quote"></span>
+        <button type="button" class="btn btn-outline-success btn-sm bird-quote-answer" hidden>Great, thank you!</button>
+      </div>
+      <div class="col-md-5 text-right mt-3">
+        <blockquote class="blockquote">
+          <p class="mb-0"> Fun is one of the most important - and underrated - ingredients in any successful venture. If
+            you're not having fun, then it's probably time to call it quits and try something else.</p>
+          <footer class="blockquote-footer">Richard Branson</footer>
+        </blockquote>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col ml-3 mt-2">
+      </div>
+    </div>
+    <div class="row top-buffer">
+      <div class="col ml-3 mt-2">
+        <p class="display-4">Information</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-11 ml-4 mt-1 mb-3">
+        This is a simple website that contains total of 6 games.The site is built with HTML5/CSS3 & Bootstrap &
+        jQuery.In the games tab you can see what you can play and what technologies are used to make the game.
+        If you wish to contact me , please see the "About me" tab. </div>
+    </div>
+  </div>
+  <!-- end container -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+  <script src="./scripts/jQuery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="./scripts/mainScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title></title>
+    <style>
+        .givebg {
+            background-color: yellow;
+        }
+
+        .selected {
+            background-color: orange;
+        }
+
+        .guessed {
+            background-color: #339933;
+        }
+
+        .wrong {
+            background-color: #ff0000;
+        }
+
+        .empty {
+            background-color: #ffccff;
+            text-align: center;
+        }
+
+        input#btn {
+            float: left;
+
+        }
+
+        table {
+            table-layout: fixed;
+            width: 80%;
+            height: 80%;
+        }
+    </style>
+    <script src='./jQuery.js'></script>
+    <script src='./jQueryUI.js'></script>
+    <script src='./myScript.js'></script>
+</head>
+<body>
+    <table border="1px">
+        <tr>
+            <td class="ans1"></td>
+            <td class="ans1"></td>
+            <td class="ans1"></td>
+            <td class="ans1"></td>
+            <td class="ans1"></td>
+            <td class="empty">*</td>
+            <td class="ans2"></td>
+            <td class="ans2"></td>
+            <td class="ans2"></td>
+            <td class="ans2"></td>
+            <td class="ans2"></td>
+            <td class="ans2"></td>
+        </tr>
+        <tr>
+            <td class="ans3"></td>
+            <td class="empty">*</td>
+            <td class="ans4"></td>
+            <td class="ans4"></td>
+            <td class="ans4"></td>
+            <td class="ans4"></td>
+            <td class="ans4"></td>
+            <td class="ans4"></td>
+            <td class="empty">*</td>
+            <td class="ans5"></td>
+            <td class="ans5"></td>
+            <td class="ans5"></td>
+        </tr>
+        <tr>
+            <td class="ans3"></td>
+            <td class="ans6"></td>
+            <td class="ans6"></td>
+            <td class="ans6"></td>
+            <td class="ans6"></td>
+            <td class="ans6"></td>
+            <td class="ans6"></td>
+            <td class="ans6"></td>
+            <td class="ans6"></td>
+            <td class="ans6">D</td>
+            <td class="ans7"></td>
+            <td class="ans8"></td>
+        </tr>
+        <tr>
+            <td class="ans3"></td>
+            <td class="ans9"></td>
+            <td class="ans9"></td>
+            <td class="ans9"></td>
+            <td class="ans9"></td>
+            <td class="ans9"></td>
+            <td class="ans9"></td>
+            <td class="ans9"></td>
+            <td class="ans9"></td>
+            <td class="ans9"></td>
+            <td class="ans7">Y</td>
+            <td class="ans8"></td>
+        </tr>
+        <tr>
+            <td class="ans3"></td>
+            <td class="ans10"></td>
+            <td class="ans10"></td>
+            <td class="ans10"></td>
+            <td class="ans10"></td>
+            <td class="empty">*</td>
+            <td class="ans11"></td>
+            <td class="ans11"></td>
+            <td class="ans11"></td>
+            <td class="ans11"></td>
+            <td class="ans7"></td>
+            <td class="ans8"></td>
+        </tr>
+    </table>
+    <p>
+        <input type="button" id="btn" value="I know this word."></input></p>
+    <br></br>
+    <p>
+        <input type="button" id="rules" value="Rules"></input></p>
+</body>
+</html>

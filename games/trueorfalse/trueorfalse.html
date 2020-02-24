@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/mainStyle.css">
+  <title>True or False</title>
+</head>
+<body>
+  <div class="container-fluid ">
+    <div class="row">
+      <div class="col-md-2 mt-2 ml-2">
+        <button type="button" class="btn btn-outline-warning btn-start">START</button>
+      </div>
+      <div class="col-md-8 text-center">
+        <div class="progress">
+          <div class="progress-bar question" role="progressbar" style="width: 100%" aria-valuenow="100"
+            aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center question-image" hidden>
+        <img src="./imgs/question.png" width="150px" height="150px">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 text-center question question-placeholder mt-2 ">
+        <p class=" question-question mt-2 "> </p>
+      </div>
+    </div>
+
+    <div class="row question">
+      <div class="col-md-3 offset-md-4">
+        <button type="button" class="btn btn-success btn-true btn-lg mt-2">True</button>
+      </div>
+      <div class="col-md-3">
+        <button type="button" class="btn btn-danger btn-false btn-lg mt-2">False</button>
+      </div>
+    </div>
+
+    <div class="fixed-bottom text-center d-none d-sm-block ">
+      <!-- hide it on XS screens so it doesn't overlap the buttons -->
+      <p class="display-4"> Answers:
+        <span class="answers-count text-success "> 0 </span> / 10 </p>
+    </div>
+  </div>
+
+  <div class="failed-time mt-4" hidden>
+    <div class="alert alert-danger" role="alert">
+      <h4 class="alert-heading">Time's up!</h4>
+      <p>Unfortunately, you ran out of time! </p>
+      <p> So far you have answered <span class="answers-count"> XX </span> question successfully! </p>
+      <hr>
+    </div>
+  </div>
+  <div class="failed-wrong mt-4" hidden>
+    <div class="alert alert-danger" role="alert">
+      <h4 class="alert-heading">Wrong answer!</h4>
+      <p>Unfortunately, you are wrong about this one! </p>
+      <p> So far you have answered <span class="answers-count"> XX </span> question successfully! </p>
+      <hr>
+    </div>
+  </div>
+
+  <div class="success-right mt-4" hidden>
+    <div class="alert alert-success" role="alert">
+      <h4 class="alert-heading">Right answer!</h4>
+      <hr>
+
+    </div>
+  </div>
+  <div class="success-gameover mt-4" hidden>
+    <div class="alert alert-success" role="alert">
+      <h4 class="alert-heading">Congratulations!</h4>
+      <hr>
+      <small class="text-muted">Press START to play again</small>
+    </div>
+  </div>
+
+  <div class="modal" id="firstInfo" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Quick Answer game</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>There will be a statement , that you must answer correctly with TRUE or FALSE within 10 seconds.<br> If you
+            got it right and you click the yellow button (at the left) there will be another statement that you must
+            answer.
+            <br>If you fail at some statement or do not answer in 10 seconds you lose. To beat the game you must answer
+            10 questions correctly. Click the yellow button when you are ready. <br><br> Good luck! </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info" data-dismiss="modal">I got it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="gameOver" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Congratulations</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="./imgs/bird.gif" width="200px" height="150px"></img>
+          <span class="bird-quote"></span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success btn-sm" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src='./scripts/jQuery.js'></script>
+  <script src='./scripts/jQueryUI.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src='./scripts/myScript.js'></script>
+</body>
+</html>

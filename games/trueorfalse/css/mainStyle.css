@@ -1,0 +1,8 @@
+.row-set-height{
+  min-height:100px;
+}
+.progress-bar {
+    -webkit-transition: none !important;
+    transition: none !important;
+}
+// to make the animation work normal

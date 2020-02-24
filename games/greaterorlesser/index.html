@@ -1,0 +1,170 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <style>
+    .td-decoration {
+      background-color: white;
+      height: 60px;
+      min-width: 60px;
+    }
+
+    .td-guessed {
+      background-color: yellow;
+    }
+
+    .td-wrong {
+      background-color: red;
+    }
+
+    .rightAnswer {
+      background-color: green;
+    }
+
+    .container {
+      height: 100vh;
+    }
+
+    .row {
+      flex: 1 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container d-flex flex-column">
+    <div class="row ">
+      <div class="col-md-12">
+        <span class="display-4 num1">1 </span>
+        <span class="display-4 num2"> 2 </span>
+        <span class="display-4 num3"> 3 </span>
+        <span class="display-4 num4"> 4 </span>
+        <span class="display-4 num5"> 5 </span>
+        <span class="display-4 num6"> 6 </span>
+        <span class="display-4 num7"> 7 </span>
+        <span class="display-4 num8"> 8 </span>
+        <span class="display-4 num9"> 9 </span>
+        <span class="display-4 num10"> 10 </span>
+        <span class="display-4 num11"> 11 </span>
+        <span class="display-4 num12"> 12 </span>
+        <span class="display-4 num13"> 13 </span>
+        <span class="display-4 num14"> 14 </span>
+        <span class="display-4 num15"> 15 </span>
+        <span class="display-4 num16"> 16 </span>
+        <span class="display-4 num17"> 17 </span>
+        <span class="display-4 num18"> 18 </span>
+        <span class="display-4 num19"> 19 </span>
+        <span class="display-4 num20"> 20 </span>
+        <span class="display-4 num21"> 21 </span>
+        <span class="display-4 num22"> 22 </span>
+        <span class="display-4 num23"> 23 </span>
+        <span class="display-4 num24"> 24 </span>
+        <span class="display-4 num25"> 25 </span>
+        <span class="display-4 num26"> 26 </span>
+        <span class="display-4 num27"> 27 </span>
+        <span class="display-4 num28"> 28 </span>
+        <span class="display-4 num29"> 29 </span>
+        <span class="display-4 num30"> 30</span>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-3 mt-3">
+        <table border="1px" height="150px" width="150px">
+          <tr>
+            <td class="random text-center"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-4 mt-4">
+        <button type="button" class="btn btn-success btn-greater mr-3">Greater</button>
+        <button type="button" class="btn btn-dark btn-hitme mr-3 ">HIT ME</button>
+        <button type="button" class="btn btn-danger btn-lesser ">Lesser</button>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-12 col-table">
+        <table border="1px" height="100px" width="100%">
+          <tr>
+            <td class="td1 td-decoration display-4 text-center"></td>
+            <td class="td2 td-decoration display-4 text-center"></td>
+            <td class="td3 td-decoration display-4 text-center"></td>
+            <td class="td4 td-decoration display-4 text-center"></td>
+            <td class="td5 td-decoration display-4 text-center"></td>
+            <td class="td6 td-decoration display-4 text-center"></td>
+            <td class="td7 td-decoration display-4 text-center"></td>
+            <td class="td8 td-decoration display-4 text-center"></td>
+            <td class="td9 td-decoration display-4 text-center"></td>
+            <td class="td10 td-decoration display-4 text-center"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-3">
+      <div class="col-md-3 ">
+        <p class="h3 chosen-label"> You have chosen : </p>
+        <span class="text-success text-greater text-center h3 ml-5" hidden> GREATER</span>
+        <span class="text-danger text-lesser text-center h3 ml-5" hidden> LESSER</span>
+        <button type="button" class="btn btn-primary btn-startagain ml-5" hidden>START AGAIN</button>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-2 ">
+        <p class="h2 chosen"> </p>
+      </div>
+    </div>
+
+    <div class="modal modal-gamewon" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Congratulations</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img src="./imgs/bird.gif" width="150px" height="130px"></img>
+            <span class="bird-quote"></span>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success btn-sm">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal-gamelost" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center h5">
+            GAME OVER.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger btn-sm">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src='./jQuery.js'></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+    integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+    integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+    crossorigin="anonymous"></script>
+  <script src='./myScript.js'></script>
+</body>
+</html>
